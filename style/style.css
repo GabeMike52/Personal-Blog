@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(2,0,31,1) 31%, rgba(77,0,148,1) 100%);
+    color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.write {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+input {
+    background-color: aliceblue;
+    display: flex;
+    width: 50%;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 10px 100px / 120px 100px;
+    padding: 5px;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+#post-btn {
+    width: 50%;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, #240068, #2c0028, #6600da, #130010);
+    background-size: 350% 100%;
+    color: aliceblue;
+    font-size: larger;
+    font-weight: bold;
+    transition: all .4s ease-in-out;
+}
+
+#post-btn:hover {
+    background-position: 100% 0;
+    animation-name: flow;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    cursor: pointer;
+}
+
+#post-btn:active {
+    background: linear-gradient(to left, #240068, #2c0028, #6600da, #130010);
+    background-size: 350% 100%;
+}
+
+.post-area {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    width: 900px;
+    height: 550px;
+    overflow: visible;
+    overflow-x: hidden;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+    border-radius: 50px;
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+}
+
+@keyframes flow {
+    0% {
+    background-position: 0% 50%;
+    }
+    100% {
+    background-position: 100%;
+    }
+}
